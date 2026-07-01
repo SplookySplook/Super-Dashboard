@@ -13,6 +13,27 @@
       .center {
         text-align: center;
       }
+      /* This only applies to screens smaller than 600px (like phones) */
+      @media (max-width: 600px) {
+        ul {
+          flex-direction: column; /* Stacks the buttons vertically */
+          align-items: center;
+        }
+
+        ul li a {
+          width: 80vw; /* Makes the buttons nice and wide for easy tapping! */
+          height: auto;
+          padding: 20px;
+          flex-direction: row; /* Puts the icon and text side-by-side instead of stacked */
+          justify-content: flex-start;
+          gap: 20px;
+        }
+
+        ul li a i {
+          font-size: 24px; /* Slightly smaller icon to fit the row layout */
+          margin-bottom: 0;
+        }
+      }
       .launch-grid {
         list-style: none;
         padding: 0;
@@ -89,7 +110,7 @@
         </li>
         <li>
           <a href="https://wikipedia.org" target="_blank">
-            <i class="fa-solid fa-book-open"></i> Wiki
+            <i class="fa-solaid fa-book-open"></i> Wiki
           </a>
         </li>
         <li>
