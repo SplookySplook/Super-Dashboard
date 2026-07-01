@@ -1,0 +1,116 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hub</title>
+    <style>
+      body {
+        font-family: Roboto;
+        background-color: #1a1a1a; /* Modern dark gray */
+        color: #ededed; /* Clean off-white for the header text */
+      }
+      .center {
+        text-align: center;
+      }
+      .launch-grid {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap; /* Allows buttons to drop to the next row */
+        justify-content: center; /* Centers the buttons on EVERY row, including the bottom! */
+        gap: 25px; /* Keeps the clean 25px gap between your massive blocks */
+
+        /* Restricts the width so it forces exactly 3 buttons on the top row */
+        max-width: 650px;
+
+        /* Centers the entire grid box underneath your header text */
+        margin: 40px auto 0 auto;
+      }
+      .launch-grid a {
+        display: inline-flex;
+        flex-direction: column; /* Keeps icon on top of the text */
+        align-items: center;
+        justify-content: center;
+        gap: 16px; /* More breathing room between the giant icon and text */
+        text-decoration: none;
+
+        /* Your stealth color palette */
+        color: #696969;
+        border: 2px solid #707070;
+
+        /* Massive uniform square footprint */
+        width: 180px;
+        height: 180px;
+
+        font-size: 1.3rem; /* Scaled up text label size */
+        font-weight: bold;
+        border-radius: 16px; /* Slightly smoother corners for the larger size */
+        transition: all 0.25s ease;
+      }
+
+      /* TARGET THE ICON: Making the icons giant to match the block size */
+      .launch-grid a i {
+        font-size: 3.2rem; /* Significantly larger icon presence */
+      }
+
+      .launch-grid a:hover {
+        background-color: #1f51ff;
+        color: #696969;
+        box-shadow: 0 8px 25px rgba(31, 81, 255, 0.4);
+        transform: translateY(
+          -4px
+        ); /* Slightly higher lift effect for a more dramatic feel */
+        cursor: pointer;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <h1 class="center">Central Hub</h1>
+      <p class="center">Get to work!</p>
+    </header>
+
+    <main>
+      <ul class="launch-grid">
+        <li>
+          <a href="https://google.com" target="_blank">
+            <i class="fa-solid fa-magnifying-glass"></i> Google
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com" target="_blank">
+            <i class="fa-brands fa-github"></i> GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://wikipedia.org" target="_blank">
+            <i class="fa-solid fa-book-open"></i> Wiki
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://calendar.google.com/calendar/u/0/r?pli=1"
+            target="_blank"
+          >
+            <i class="fa-solid fa-calendar-days"></i> Calendar
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube.com" target="_blank">
+            <i class="fa-brands fa-youtube"></i> Youtube
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.google.com/document/u/0/?pli=1" target="_blank">
+            <i class="fa-solid fa-file-lines"></i> Docs
+          </a>
+        </li>
+      </ul>
+    </main>
+  </body>
+</html>
