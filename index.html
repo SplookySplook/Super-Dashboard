@@ -1,277 +1,105 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hub</title>
+    <!-- Font Awesome Link for clean, reliable icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
       body {
-        font-family: Roboto;
-        background-color: #1a1a1a; /* Modern dark gray */a<!doctype html>
-
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hub</title>
-    <style>
-      body {
-        font-family: Roboto;
-        background-color: #1a1a1a; /* Modern dark gray */
-        color: #ededed; /* Clean off-white for the header text */
+        background-color: #1a1a1a;
+        font-family: Arial, sans-serif;
+        color: #ededed;
+        margin: 0;
+        padding: 0;
       }
+
       .center {
         text-align: center;
+        margin-top: 50px;
       }
-      /* This only applies to screens smaller than 600px (like phones) */
+
+      h1 {
+        color: #ededed;
+      }
+
+      .launch-grid {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        max-width: 650px;
+        margin: 40px auto 0 auto;
+      }
+
+      .launch-grid li a {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        text-decoration: none;
+        color: #696969;
+        border: 2px solid #707070;
+        width: 180px;
+        height: 180px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 16px;
+        transition: all 0.25s ease;
+      }
+
+      .launch-grid li a i {
+        font-size: 3.2rem;
+      }
+
+      .launch-grid li a:hover {
+        background-color: #1f51ff;
+        color: #ededed;
+        box-shadow: 0 8px 25px rgba(31, 81, 255, 0.4);
+        transform: translateY(-4px);
+        cursor: pointer;
+      }
+
+      /* Mobile Layout Rules */
       @media (max-width: 600px) {
-        ul {
-          flex-direction: column; /* Stacks the buttons vertically */
+        .launch-grid {
+          flex-direction: column;
           align-items: center;
         }
 
-        ul li a {
-          width: 80vw; /* Makes the buttons nice and wide for easy tapping! */
+        .launch-grid li a {
+          width: 80vw;
           height: auto;
           padding: 20px;
-          flex-direction: row; /* Puts the icon and text side-by-side instead of stacked */
+          flex-direction: row;
           justify-content: flex-start;
           gap: 20px;
         }
 
-        ul li a i {
-          font-family:
-            "Font Awesome 5 Free", "FontAwesome", sans-serif; /* Keeps the icon font active */
-          font-weight: 900; /* Ensures solid icons render correctly */
+        .launch-grid li a i {
           font-size: 24px;
           margin-bottom: 0;
         }
       }
-      .launch-grid {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap; /* Allows buttons to drop to the next row */
-        justify-content: center; /* Centers the buttons on EVERY row, including the bottom! */
-        gap: 25px; /* Keeps the clean 25px gap between your massive blocks */
-
-        /* Restricts the width so it forces exactly 3 buttons on the top row */
-        max-width: 650px;
-
-        /* Centers the entire grid box underneath your header text */
-        margin: 40px auto 0 auto;
-      }
-      .launch-grid a {
-        display: inline-flex;
-        flex-direction: column; /* Keeps icon on top of the text */
-        align-items: center;
-        justify-content: center;
-        gap: 16px; /* More breathing room between the giant icon and text */
-        text-decoration: none;
-
-        /* Your stealth color palette */
-        color: #696969;
-        border: 2px solid #707070;
-
-        /* Massive uniform square footprint */
-        width: 180px;
-        height: 180px;
-
-        font-size: 1.3rem; /* Scaled up text label size */
-        font-weight: bold;
-        border-radius: 16px; /* Slightly smoother corners for the larger size */
-        transition: all 0.25s ease;
-      }
-
-      /* TARGET THE ICON: Making the icons giant to match the block size */
-      .launch-grid a i {
-        font-size: 3.2rem; /* Significantly larger icon presence */
-      }
-
-      .launch-grid a:hover {
-        background-color: #1f51ff;
-        color: #696969;
-        box-shadow: 0 8px 25px rgba(31, 81, 255, 0.4);
-        transform: translateY(
-          -4px
-        ); /* Slightly higher lift effect for a more dramatic feel */
-        cursor: pointer;
-      }
     </style>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
   </head>
   <body>
-    <header>
-      <h1 class="center">Central Hub</h1>
-      <p class="center">Get to work!</p>
-    </header>
+    <div class="center">
+      <h1>Central Hub</h1>
+      <p>Get to work!</p>
+    </div>
 
-    <main>
-      <ul class="launch-grid">
-        <li>
-          <a href="https://google.com" target="_blank">
-            <i class="fa-solid fa-magnifying-glass"></i> Google
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com" target="_blank">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://wikipedia.org" target="_blank">
-            <i class="fa-solaid fa-book-open"></i> Wiki
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://calendar.google.com/calendar/u/0/r?pli=1"
-            target="_blank"
-          >
-            <i class="fa-solid fa-calendar-days"></i> Calendar
-          </a>
-        </li>
-        <li>
-          <a href="https://youtube.com" target="_blank">
-            <i class="fa-brands fa-youtube"></i> Youtube
-          </a>
-        </li>
-        <li>
-          <a href="https://docs.google.com/document/u/0/?pli=1" target="_blank">
-            <i class="fa-solid fa-file-lines"></i> Docs
-          </a>
-        </li>
-      </ul>
-    </main>
-  </body>
-</html>
-
-        color: #ededed; /* Clean off-white for the header text */
-      }
-      .center {
-        text-align: center;
-      }
-      /* This only applies to screens smaller than 600px (like phones) */
-      @media (max-width: 600px) {
-        ul {
-          flex-direction: column; /* Stacks the buttons vertically */
-          align-items: center;
-        }
-
-        ul li a {
-          width: 80vw; /* Makes the buttons nice and wide for easy tapping! */
-          height: auto;
-          padding: 20px;
-          flex-direction: row; /* Puts the icon and text side-by-side instead of stacked */
-          justify-content: flex-start;
-          gap: 20px;
-        }
-
-        ul li a i {
-          font-size: 24px; /* Slightly smaller icon to fit the row layout */
-          margin-bottom: 0;
-        }
-      }
-      .launch-grid {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap; /* Allows buttons to drop to the next row */
-        justify-content: center; /* Centers the buttons on EVERY row, including the bottom! */
-        gap: 25px; /* Keeps the clean 25px gap between your massive blocks */
-
-        /* Restricts the width so it forces exactly 3 buttons on the top row */
-        max-width: 650px;
-
-        /* Centers the entire grid box underneath your header text */
-        margin: 40px auto 0 auto;
-      }
-      .launch-grid a {
-        display: inline-flex;
-        flex-direction: column; /* Keeps icon on top of the text */
-        align-items: center;
-        justify-content: center;
-        gap: 16px; /* More breathing room between the giant icon and text */
-        text-decoration: none;
-
-        /* Your stealth color palette */
-        color: #696969;
-        border: 2px solid #707070;
-
-        /* Massive uniform square footprint */
-        width: 180px;
-        height: 180px;
-
-        font-size: 1.3rem; /* Scaled up text label size */
-        font-weight: bold;
-        border-radius: 16px; /* Slightly smoother corners for the larger size */
-        transition: all 0.25s ease;
-      }
-
-      /* TARGET THE ICON: Making the icons giant to match the block size */
-      .launch-grid a i {
-        font-size: 3.2rem; /* Significantly larger icon presence */
-      }
-
-      .launch-grid a:hover {
-        background-color: #1f51ff;
-        color: #696969;
-        box-shadow: 0 8px 25px rgba(31, 81, 255, 0.4);
-        transform: translateY(
-          -4px
-        ); /* Slightly higher lift effect for a more dramatic feel */
-        cursor: pointer;
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <header>
-      <h1 class="center">Central Hub</h1>
-      <p class="center">Get to work!</p>
-    </header>
-
-    <main>
-      <ul class="launch-grid">
-        <li>
-          <a href="https://google.com" target="_blank">
-            <i class="fa-solid fa-magnifying-glass"></i> Google
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com" target="_blank">
-            <i class="fa-brands fa-github"></i> GitHub
-          </a>
-        </li>
-        <li>
-          <a href="https://wikipedia.org" target="_blank">
-            <i class="fa-solaid fa-book-open"></i> Wiki
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://calendar.google.com/calendar/u/0/r?pli=1"
-            target="_blank"
-          >
-            <i class="fa-solid fa-calendar-days"></i> Calendar
-          </a>
-        </li>
-        <li>
-          <a href="https://youtube.com" target="_blank">
-            <i class="fa-brands fa-youtube"></i> Youtube
-          </a>
-        </li>
-        <li>
-          <a href="https://docs.google.com/document/u/0/?pli=1" target="_blank">
-            <i class="fa-solid fa-file-lines"></i> Docs
-          </a>
-        </li>
-      </ul>
-    </main>
+    <ul class="launch-grid">
+      <li><a href="https://google.com"><i class="fa-solid fa-magnifying-glass"></i> Google</a></li>
+      <li><a href="https://github.com"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="https://wikipedia.org"><i class="fa-solid fa-book-open"></i> Wiki</a></li>
+      <li><a href="https://calendar.google.com"><i class="fa-solid fa-calendar-days"></i> Calendar</a></li>
+      <li><a href="https://youtube.com"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
+      <li><a href="https://docs.google.com"><i class="fa-solid fa-file-lines"></i> Docs</a></li>
+    </ul>
   </body>
 </html>
